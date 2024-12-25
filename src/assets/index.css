@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Gravitas One";
+  src: url("./fonts/GravitasOne-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-Medium.ttf");
+  font-weight: 500;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.centering {
+  @apply w-10/12 mx-auto;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 6s ease infinite;
+}
+
+.marked-line {
+  @apply relative before:absolute  before:w-28 before:h-4 before:-skew-x-12 before:-translate-x-1/2 before:bg-rose-400 before:-z-10;
+}
+
+p {
+  @apply opacity-80;
+}
+
+form > * {
+  @apply w-1/2;
+}
